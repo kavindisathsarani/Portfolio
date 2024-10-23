@@ -170,6 +170,7 @@ h3 {
 #about p {
   padding: 20px;
   font-family: "Crimson Text", serif;
+  font-size: 1.4rem;
 }
 .about-container {
   display: flex;
@@ -197,6 +198,10 @@ h3 {
   font-family: "Crimson Text", serif;
   /* font-size: 1.2rem; */
   padding: 20px;
+}
+
+#services p {
+  font-size: 1.4rem;
 }
 
 /* mobile phones */
@@ -253,6 +258,18 @@ h3 {
     object-fit: cover;
     margin: 20px;
   }
+
+  #about p {
+    font-size: 0.8rem;
+  }
+
+  #services h1 {
+    font-size: 2rem;
+  }
+
+  #services p {
+    font-size: 0.8rem;
+  }
 }
 
 /* tablets */
@@ -303,7 +320,16 @@ h3 {
   }
 
   #about p {
-    padding: 0 60px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  #services h1 {
+    font-size: 3rem;
+  }
+
+  #services p {
+    font-size: 1rem;
   }
 }
 
