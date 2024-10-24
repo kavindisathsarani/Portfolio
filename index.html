@@ -42,7 +42,7 @@
           <li><a href="#Qualifications">Qualifications</a></li>
           <li><a href="#Projects">Projects</a></li>
           <li><a href="#feedbacks">Feedbacks</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#Contacts">Contacts</a></li>
         </ul>
         <i class="fa fa-bars burger" id="burger" aria-hidden="true"></i>
       </nav>
@@ -57,6 +57,7 @@
         <li><a href="#Qualifications">Qualifications</a></li>
         <li><a href="#Projects">Projects</a></li>
         <li><a href="#feedbacks">Feedbacks</a></li>
+        <li><a href="#Contacts">Contacts</a></li>
       </ul>
     </div>
     <main>
@@ -313,7 +314,78 @@
           </div>
         </div>
       </section>
+
+      <section id="Contacts">
+        <h1>Get In Touch</h1>
+        <p>
+          Full-stack developers build robust and user-friendly solutions by
+          combining front-end and back-end skills. They collaborate to deliver
+          innovative software in a dynamic tech environment.
+        </p>
+
+        <div class="contact-container">
+          <div class="contact-card">
+            <div class="content-deatil">
+              <img src="/assests/images/icons8-call-50.png" alt="call" />
+              <p>call me</p>
+            </div>
+            <p>+94777875645</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="content-deatil">
+              <img src="/assests/images/icons8-address-50.png" alt="address" />
+              <p>Location</p>
+            </div>
+            <p>no.7, Sri Lanka</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="content-deatil">
+              <img src="/assests/images/icons8-email-50.png" alt="Email" />
+              <p id="email">Email</p>
+            </div>
+            <p>dksmainmendra0@gmail.com</p>
+          </div>
+        </div>
+
+        <form action="/submit-form">
+          <div class="form-box">
+            <div class="name-email">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="email"
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
     </main>
+
+    <footer>
+      <div class="social-media-container">
+        <img src="/assests/images/icons8-youtube-50.png" alt="youtube" />
+        <img src="/assests/images/icons8-linkedin-50.png" alt="linkdln" />
+        <img src="/assests//images/icons8-x-50.png" alt="twitter" />
+        <img src="/assests/images/icons8-instagram-50.png" alt="instagram" />
+      </div>
+      <h2><span class="icon">&copy;</span> All Right Received</h2>
+    </footer>
     <script>
       const burger = document.getElementById("burger");
       const menuPanel = document.getElementById("menu-panel-id");
