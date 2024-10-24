@@ -4,6 +4,14 @@ body {
   color: white;
 }
 
+section {
+  scroll-margin-top: 100px; /* Replace 100px with your header's height */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 #home {
   background-image: url(/assests/images/programming-background-new.jpg);
   background-size: cover;
@@ -496,6 +504,9 @@ h5 {
     justify-content: space-between;
   }
 
+  #Projects h1 {
+    font-size: 2rem;
+  }
   .project-bar {
     font-size: 0.8rem;
   }
