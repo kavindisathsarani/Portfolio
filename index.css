@@ -492,17 +492,27 @@ footer {
   cursor: pointer;
 }
 
-.social-media-container img {
+.social-media-container i {
   transition: transform ease;
-  width: 50px;
+  margin: 5px;
+  color: white;
+  font-size: 3.5rem;
 }
 
-.social-media-container img:hover {
+.social-media-container i:hover {
   transform: scale(1.2);
+  color: #55769d;
 }
 
 footer > h2 {
   font-size: 1rem;
+  text-align: center;
+}
+
+h3 {
+  margin: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -702,8 +712,8 @@ footer > h2 {
     padding: 10px 10px;
   }
 
-  .social-media-container img {
-    width: 45px;
+  .social-media-container i {
+    font-size: 1.5rem;
   }
 }
 
@@ -844,5 +854,9 @@ footer > h2 {
   .name-email {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .social-media-container i {
+    font-size: 2.5rem;
   }
 }
