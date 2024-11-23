@@ -257,29 +257,82 @@
         </div>
       </section>
 
-      <section id="Projects">
+      <section id="Projects" class="portfolio">
         <h1>Projects</h1>
-        <div class="project-bar">
-          <p>All Projects</p>
-          <p>Websites</p>
-          <p>Desktop Applications</p>
-          <p>UI/UX Designs</p>
-        </div>
-
-        <div class="project-pictures">
-          <img
-            src="/assests/images/tailor-shop-management-login-page.png"
-            alt="tailor-shop-management"
-          />
-          <img src="/assests/images/chatimage.png" alt="chat-Ai" />
-          <img
-            src="/assests/images/9dd2b78e0c6199c405a2aa79cac19602.jpg"
-            alt="desktop application"
-          />
-          <img
-            src="/assests/images/3-Login-Page-Screen.jpg"
-            alt="login page UI Design"
-          />
+        <p>My most recent works</p>
+        <div class="carousel">
+          <button class="carousel-btn prev" onclick="prevSlide()">
+            &#x276E;
+          </button>
+          <div class="carousel-wrapper">
+            <div class="carousel-item">
+              <img
+                src="/assests/images/Screenshot 2024-11-23 192959.png"
+                alt="Hotel Booking Website"
+              />
+              <div class="item-info">
+                <h3>Hotel Booking Website</h3>
+                <p>
+                  A responsive hotel booking website designed to provide a
+                  smooth and easy booking experience. Users can explore
+                  different hotels, check availability, and make reservations
+                  effortlessly. With a user-friendly interface, this website is
+                  perfect for travelers looking to book their next stay, whether
+                  it's for business or leisure.
+                </p>
+                <a href="https://hotel-website-ccf75.web.app" class="demo-btn"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assests/images/Screenshot 2024-11-23 193117.png"
+                alt="recipe webite"
+              />
+              <div class="item-info">
+                <h3>Recipe Website</h3>
+                <p>
+                  A beautifully designed recipe website that makes cooking
+                  easier and more enjoyable. Users can browse a variety of
+                  delicious recipes, view step-by-step instructions, and explore
+                  ingredient lists. With a focus on simplicity and user
+                  experience, this website is perfect for home cooks looking to
+                  try new dishes, whether for a casual meal or a special
+                  occasion.
+                </p>
+                <a href="https://recipe-site-8070d.web.app" class="demo-btn"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/assests/images/Screenshot 2024-05-27 180344.png"
+                alt="TailorShop"
+              />
+              <div class="item-info">
+                <h3>TailorShop Standalone application</h3>
+                <p>
+                  A comprehensive tailor shop management application designed to
+                  streamline operations for tailoring businesses. From tracking
+                  customer orders and managing garment inventory to processing
+                  payments and scheduling deliveries, this application offers a
+                  seamless experience. With its intuitive interface, the
+                  TailorShop app helps tailors focus on their craft while
+                  efficiently handling the administrative side of the business.
+                </p>
+                <a
+                  href="https://github.com/kavindisathsarani/tailorShop-without-registration.git"
+                  class="demo-btn"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn next" onclick="nextSlide()">
+            &#x276F;
+          </button>
         </div>
       </section>
 
@@ -466,5 +519,6 @@
       });
     </script>
     <script src="js/Qualifications.js"></script>
+    <script src="js/projects.js"></script>
   </body>
 </html>

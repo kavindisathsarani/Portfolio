@@ -446,37 +446,122 @@ h1 span {
 }
 
 /* Projects */
-
-#Projects h1 {
-  font-family: Arial, sans-serif;
-  font-size: 3.5rem;
+.portfolio {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.project-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 20px;
-  font-size: 1.5rem;
+.portfolio h1 {
+  font-family: Arial, sans-serif;
+  font-size: 3.5rem;
+}
+.item-info h3 {
+  color: #55769d;
 }
 
-.project-bar p:hover {
-  color: rgb(117, 112, 112);
+.carousel {
+  perspective: 1000px; /* Perspective for 3D effect */
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px; /* Add margin to separate from the header */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for the carousel */
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  background-color: #1e1e1e; /* Background color for the carousel items */
+  transition: transform 0.5s ease; /* Smooth transition for each item */
+  backface-visibility: hidden; /* Hide the back of the items */
+  border-radius: 10px; /* Rounded corners for carousel items */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow around carousel items */
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.item-info {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+  color: #fff;
+  border-radius: 0 0 10px 10px; /* Round bottom corners of the text box */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.item-info p {
+  font-family: "Crimson Text", serif;
+}
+
+.carousel-item:hover .item-info {
+  opacity: 1; /* Show text on hover */
+  transform: translateY(0); /* Slide in text */
+}
+
+.carousel-btn {
+  border: none;
   cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 998; /* Ensure buttons are above other elements */
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent background for visibility */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
 }
 
-.project-pictures {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 20px;
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+  transform: scale(1.1); /* Slight enlarge effect on hover */
 }
 
-.project-pictures img {
-  object-fit: cover;
-  width: 45vw;
-  height: 45vh;
+.carousel-btn.prev {
+  left: 10px; /* Position left */
+}
+
+.carousel-btn.next {
+  right: 10px; /* Position right */
+}
+
+.demo-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #55769d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.demo-btn:hover {
+  background-color: #55769d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* feedbacks */
@@ -810,23 +895,22 @@ h3 {
     font-size: 0.8rem;
   }
   /* projects */
-  #Projects h1 {
+  .carousel-btn {
+    font-size: 1.5rem; /* Smaller button size */
+    padding: 8px; /* Smaller padding */
+  }
+
+  .item-info {
+    padding: 10px; /* Smaller padding for text */
+  }
+
+  .demo-btn {
+    padding: 8px 12px; /* Smaller button size */
+  }
+
+  .portfolio h1 {
+    font-family: Arial, sans-serif;
     font-size: 2rem;
-  }
-  .project-bar {
-    font-size: 0.8rem;
-  }
-
-  .project-pictures {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin: 20px;
-  }
-
-  .project-pictures img {
-    object-fit: cover;
-    width: 65vw;
-    height: 30vh;
   }
 
   /* feedback */
@@ -1007,14 +1091,40 @@ h3 {
   }
 
   /* projects */
-  .project-bar {
-    font-size: 1rem;
-  }
 
-  #Projects h1 {
+  .portfolio h1 {
+    font-family: Arial, sans-serif;
     font-size: 2rem;
   }
 
+  .carousel {
+    margin-top: 15px; /* Slightly reduce margin */
+  }
+
+  .carousel-btn {
+    font-size: 1.75rem; /* Adjust button size */
+    padding: 10px; /* Maintain padding */
+  }
+
+  .carousel-item {
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .item-info {
+    padding: 15px; /* Adjust padding for text */
+  }
+
+  .demo-btn {
+    padding: 10px 12px; /* Adjust button size */
+  }
+
+  .carousel img {
+    border-radius: 6px; /* Adjust image border radius */
+  }
+
+  .carousel-item:hover img {
+    transform: scale(1.03); /* Slightly reduce zoom effect on hover */
+  }
   #feedbacks h1 {
     font-size: 2rem;
   }
