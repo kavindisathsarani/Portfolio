@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  z-index: 999; /* Header stays above most content */
 }
 
 #greeting,
@@ -103,7 +104,7 @@ header {
   top: 0;
   right: -100%;
   transition: right 0.4s ease;
-  z-index: 1;
+  z-index: 1000; /* High enough to appear above header */
 }
 
 .menu-panel ul {
@@ -130,6 +131,8 @@ header {
   position: absolute;
   top: 10px;
   right: 20px;
+  z-index: 1001;
+  position: absolute; /* Ensure it doesn't follow the normal flow */
 }
 
 #btn-download {
@@ -212,8 +215,7 @@ h3 {
 }
 /* service section */
 #services h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Arial, sans-serif;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -270,6 +272,10 @@ h3 {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.Qualifications-title {
+  font-size: 3.5rem;
 }
 
 h1 {
@@ -407,7 +413,7 @@ h1 span {
 
 .skills-section p {
   font-size: 1em;
-  color: #aaa;
+  font-family: "Crimson Text", serif;
   margin-bottom: 30px;
 }
 
@@ -442,8 +448,7 @@ h1 span {
 /* Projects */
 
 #Projects h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Arial, sans-serif;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -476,8 +481,7 @@ h1 span {
 
 /* feedbacks */
 #feedbacks h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Arial, sans-serif;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -534,8 +538,7 @@ h5 {
 
 /* contacts */
 #Contacts h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Arial, sans-serif;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -752,6 +755,10 @@ h3 {
     opacity: 1;
   }
 
+  .Qualifications-title {
+    font-size: 2rem;
+  }
+
   #Qualifications h1 {
     font-size: 1.8rem;
   }
@@ -880,6 +887,10 @@ h3 {
   .social-media-container i {
     font-size: 1.5rem;
   }
+
+  section {
+    scroll-margin-top: 65px; /* Replace 100px with your header's height */
+  }
 }
 
 /* tablets */
@@ -915,7 +926,7 @@ h3 {
   }
 
   #title-about {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .about-container {
@@ -935,7 +946,7 @@ h3 {
   }
 
   #services h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   #services p {
@@ -964,6 +975,10 @@ h3 {
   }
 
   /* Qualifications */
+  .Qualifications-title {
+    font-size: 2rem;
+  }
+
   #Qualifications h1 {
     font-size: 2rem;
   }
@@ -996,8 +1011,12 @@ h3 {
     font-size: 1rem;
   }
 
+  #Projects h1 {
+    font-size: 2rem;
+  }
+
   #feedbacks h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   #feedbacks p {
@@ -1023,7 +1042,7 @@ h3 {
   }
 
   #Contacts h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   #Contacts p {
