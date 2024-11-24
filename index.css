@@ -65,6 +65,10 @@ header {
   font-family: "Dancing Script", cursive;
 }
 
+#home-me {
+  font-family: "Dancing Script", cursive !important;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -154,6 +158,29 @@ header {
   background-color: #0056b3; /* Darker blue on hover */
   box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between icons */
+  padding: 20px; /* Padding around the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.social-icon {
+  font-size: 3.5rem; /* Adjust icon size */
+  color: white; /* Default icon color */
+  transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.social-icon:hover {
+  color: #007bff; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6); /* Glow effect */
+}
+
 #title-about {
   font-family: "Chewy", system-ui;
   font-weight: 400;
@@ -606,16 +633,16 @@ h1 span {
 }
 
 .github-link {
-  font-size: 36px; /* Increase icon size */
+  font-size: 2rem; /* Increase icon size */
   color: white;
   margin-right: 15px; /* Space between icon and button */
   transition: color 0.3s; /* Smooth color transition */
 }
 
 .github-link:hover {
-  color: #4f92e9; /* Change color on hover */
-  /* box-shadow: 0 4px 12px rgb(103, 101, 101); */
   transform: scale(1.1);
+  color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 
 .projects-btn {
@@ -636,60 +663,79 @@ h1 span {
 }
 
 /* feedbacks */
-#feedbacks h1 {
-  font-family: Arial, sans-serif;
-  font-size: 3.5rem;
+.feedbacks {
   text-align: center;
-}
-
-#feedbacks p {
-  font-family: "Crimson Text", serif;
-  padding: 0 30px;
-  font-size: 1.4rem;
-}
-
-.feedback-card {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 12px rgb(103, 101, 101);
-}
-
-.profile-details {
-  display: flex;
-}
-
-.profile-details img {
-  width: 200px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 10px;
-}
-
-.profile-names {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1rem;
-}
-
-.profile-names h3,
-h5 {
-  font-family: "Crimson Text", serif;
-  margin: 0;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
 }
 
 .feedback-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 20px;
-  /* padding: 10px; */
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
+  margin: 90px;
+  border-radius: 10px;
+}
+
+.feedback-card {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  opacity: 0;
+  display: none; /* Hide all cards initially */
+  height: 300px;
+  transition: transform ease-in-out 0.3;
+}
+
+.feedback-card:hover {
+  transform: translateY(-10px); /* Stand-up effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.feedback-card.active {
+  opacity: 1;
+  display: block; /* Show active card */
+}
+
+.profile-details {
+  margin-bottom: 15px;
+}
+
+.profile-details img {
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
 .star {
-  display: flex;
-  justify-content: right;
+  color: #55769d;
+}
+
+button.prev,
+button.next {
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
 }
 
 /* contacts */
@@ -719,6 +765,15 @@ h5 {
 
 .content-deatil {
   display: flex;
+}
+
+.content-deatil i {
+  margin-right: 10px;
+  font-size: 3.5rem;
+}
+.content-deatil i:hover {
+  color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 
 .form-box {
@@ -775,42 +830,108 @@ textarea {
   box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 
+/* Footer Container */
 footer {
-  /* position: absolute;
-  bottom: 0; */
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: Arial, sans-serif;
   margin-top: 20px;
-  background-color: #131417;
-  width: 100%;
 }
 
-.social-media-container {
+.footer-container {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-container h5 {
+  font-family: "Dancing Script", cursive;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  font-family: "Crimson Text", serif;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #528fb2;
+}
+
+.footer-container h5 {
+  font-size: 2rem;
+}
+
+.footer-social {
+  text-align: center;
+  flex: 1 1 30%;
+}
+
+.footer-social i {
+  font-size: 3.5rem;
+  color: white;
+  transition: color 0.3s;
+  margin-left: 3px;
+}
+
+.footer-social i:hover {
+  transform: scale(1.1);
+  color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #0056b3; /* Button color */
+  color: white;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
 }
 
-.social-media-container i {
-  transition: transform ease;
-  margin: 5px;
-  color: white;
-  font-size: 3.5rem;
+#scrollToTop:hover {
+  transform: scale(1.1);
+  background-color: #0056b3; /* Hover color */
 }
 
-.social-media-container i:hover {
-  transform: scale(1.2);
-  color: #55769d;
-}
-
-footer > h2 {
-  font-size: 1rem;
-  text-align: center;
-}
-
-h3 {
-  margin: 10px;
-  font-family: "Dancing Script", cursive;
-  font-size: 1.4rem;
-  text-align: center;
+/* Show button when page is scrolled */
+#scrollToTop.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* begins media queries */
@@ -852,6 +973,15 @@ h3 {
     width: 150px;
     font-size: 0.8rem;
     padding: 10px;
+  }
+
+  .home-container {
+    gap: 8px; /* Further reduce space between icons */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .social-icon {
+    font-size: 2.5rem; /* Smaller icon size for very small screens */
   }
 
   #title-about {
@@ -1004,20 +1134,21 @@ h3 {
 
   #feedbacks p {
     font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .feedback-card {
+    height: 350px;
   }
 
   .profile-details img {
-    width: 100px;
+    width: 70px;
     height: 50px;
-    margin: 5px;
+    margin-top: 15px;
   }
 
-  .feedback-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   .star {
-    height: 30px;
+    font-size: 0.8rem;
   }
 
   .profile-names {
@@ -1030,6 +1161,10 @@ h3 {
 
   #Contacts p {
     font-size: 0.8rem;
+  }
+  .content-deatil i {
+    margin-right: 10px;
+    font-size: 1.5rem;
   }
 
   .contact-container {
@@ -1052,8 +1187,8 @@ h3 {
     padding: 10px 10px;
   }
 
-  .social-media-container i {
-    font-size: 1.5rem;
+  .footer-social i {
+    font-size: 2rem;
   }
 
   section {
@@ -1091,6 +1226,15 @@ h3 {
     width: 180px;
     font-size: 0.8rem;
     padding: 14px;
+  }
+
+  .home-container {
+    gap: 10px; /* Reduce space between icons */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .social-icon {
+    font-size: 3rem; /* Smaller icon size for medium screens */
   }
 
   #title-about {
@@ -1209,8 +1353,14 @@ h3 {
   .carousel-item:hover img {
     transform: scale(1.03); /* Slightly reduce zoom effect on hover */
   }
+
+  /* feedbacks */
   #feedbacks h1 {
     font-size: 2rem;
+  }
+
+  .feedback-card {
+    height: 330px;
   }
 
   #feedbacks p {
@@ -1218,8 +1368,8 @@ h3 {
   }
 
   .profile-details img {
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
     margin: 10px;
   }
 
@@ -1228,11 +1378,16 @@ h3 {
     grid-template-columns: 1fr;
   }
   .star {
-    height: 30px;
+    font-size: 1.5rem;
   }
 
   .profile-names {
     font-size: 0.9rem;
+  }
+
+  .content-deatil i {
+    margin-right: 10px;
+    font-size: 2.5rem;
   }
 
   #Contacts h1 {
@@ -1248,7 +1403,7 @@ h3 {
     gap: 10px;
   }
 
-  .social-media-container i {
+  .footer-social i {
     font-size: 2.5rem;
   }
 

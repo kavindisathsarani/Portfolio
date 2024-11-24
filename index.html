@@ -68,6 +68,44 @@
           <div id="Profession">Professional fullstack developer</div>
 
           <button id="btn-download">Download CV</button>
+          <div id="home-me">contact me</div>
+          <div class="home-container">
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://github.com/kavindisathsarani"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+          </div>
         </div>
       </section>
       <section id="about">
@@ -356,21 +394,20 @@
         </div>
       </section>
 
-      <section id="feedbacks">
+      <section id="feedbacks" class="feedbacks">
         <h1>Feedbacks</h1>
         <p>
-          Full-stack developers build seamless and efficient solutions by
-          combining front-end and back-end expertise. They collaborate to
-          deliver innovative software in a fast-paced tech environment.
+          Discover what my peers and instructors have to say about my work and
+          dedication-insights that highlight my passion for learning and growth
         </p>
 
         <div class="feedback-container">
-          <div class="feedback-card">
+          <div class="feedback-card active">
             <div class="profile-details">
               <img src="/assests/images/download.jpg" alt="john's pic" />
               <div class="profile-names">
-                <h3>Mr.John adams</h3>
-                <h5>codepro</h5>
+                <h3>Mr. John Adams</h3>
+                <h5>Codepro</h5>
               </div>
             </div>
             <p>
@@ -379,26 +416,11 @@
               deliver innovative software in a fast-paced tech environment.
             </p>
             <div class="star">
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (2).png"
-                alt="empty-star"
-              />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
             </div>
           </div>
 
@@ -406,7 +428,7 @@
             <div class="profile-details">
               <img src="/assests/images/stephani.jpg" alt="stephani's pic" />
               <div class="profile-names">
-                <h3>Ms.Stephani Dias</h3>
+                <h3>Ms. Stephani Dias</h3>
                 <h5>Dreamcode</h5>
               </div>
             </div>
@@ -414,32 +436,22 @@
               Exceptional service paired with unparalleled expertise. Highly
               recommended. They transformed our vision into a stunning reality
               with flawless execution and attention to detail, exceeding all
-              expectations
+              expectations.
             </p>
             <div class="star">
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (1).png"
-                alt="filled-star"
-              />
-              <img
-                src="/assests/images/icons8-star-50 (2).png"
-                alt="empty-star"
-              />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
             </div>
           </div>
+
+          <!-- Add more feedback cards as needed -->
         </div>
+
+        <button class="prev" onclick="changeFeedback(-1)">&#10094;</button>
+        <button class="next" onclick="changeFeedback(1)">&#10095;</button>
       </section>
 
       <section id="Contacts">
@@ -453,24 +465,21 @@
         <div class="contact-container">
           <div class="contact-card">
             <div class="content-deatil">
-              <img src="/assests/images/icons8-call-50.png" alt="call" />
-              <p>call me</p>
+              <p><i class="fa-solid fa-phone-volume"></i>call me</p>
             </div>
             <p>+94777875645</p>
           </div>
 
           <div class="contact-card">
             <div class="content-deatil">
-              <img src="/assests/images/icons8-address-50.png" alt="address" />
-              <p>Location</p>
+              <p><i class="fa-solid fa-location-dot"></i>Location</p>
             </div>
             <p>no.7, Sri Lanka</p>
           </div>
 
           <div class="contact-card">
             <div class="content-deatil">
-              <img src="/assests/images/icons8-email-50.png" alt="Email" />
-              <p id="email">Email</p>
+              <p id="email"><i class="fa-solid fa-envelope"></i>Email</p>
             </div>
             <p>dksmainmendra0@gmail.com</p>
           </div>
@@ -502,29 +511,54 @@
           <button type="submit" class="btn">Send Message</button>
         </form>
       </section>
+      <!-- Scroll to Top Button -->
+      <div id="scrollToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </div>
     </main>
 
     <footer>
-      <h3>Contact Us</h3>
-      <div class="social-media-container">
-        <a href="https://www.youtube.com" target="_blank"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
-        <a href="https://www.linkedin.com" target="_blank"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://www.facebook.com" target="_blank"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://www.twitter.com" target="_blank"
-          ><i class="fa-brands fa-x-twitter"></i
-        ></a>
-        <a href="https://github.com/" target="_blank"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
+      <div class="footer-container">
+        <div class="footer-links">
+          <ul>
+            <h5>Quick links</h5>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#Qualifications">Qualifications</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#feedbacks">Feedbacks</a></li>
+            <li><a href="#Contacts">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h5>contact me</h5>
+          <a href="https://www.youtube.com" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://www.linkedin.com" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://github.com/" target="_blank"
+            ><i class="fa-brands fa-square-github"></i
+          ></a>
+        </div>
       </div>
-      <h2><span class="icon">&copy;</span> All Right Received</h2>
+      <div class="footer-bottom">
+        <h2><span class="icon">&copy;</span> All Right Received</h2>
+        <h3>
+          Designed and developed by Kavindi
+          <span><i class="fa-solid fa-heart"></i></span>
+        </h3>
+      </div>
     </footer>
+
     <script>
       const burger = document.getElementById("burger");
       const menuPanel = document.getElementById("menu-panel-id");
@@ -540,5 +574,7 @@
     </script>
     <script src="js/Qualifications.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/feedbacks.js"></script>
+    <script src="js/scroll.js"></script>
   </body>
 </html>
