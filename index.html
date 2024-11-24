@@ -36,13 +36,13 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#Qualifications">Qualifications</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#feedbacks">Feedbacks</a></li>
-          <li><a href="#Contacts">Contacts</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#Qualifications" class="nav-link">Qualifications</a></li>
+          <li><a href="#Projects" class="nav-link">Projects</a></li>
+          <li><a href="#feedbacks" class="nav-link">Feedbacks</a></li>
+          <li><a href="#Contacts" class="nav-link">Contacts</a></li>
         </ul>
         <i class="fa fa-bars burger" id="burger" aria-hidden="true"></i>
       </nav>
@@ -51,13 +51,13 @@
     <div class="menu-panel" id="menu-panel-id">
       <button class="close-btn" id="btn-close">&times;</button>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#Qualifications">Qualifications</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#feedbacks">Feedbacks</a></li>
-        <li><a href="#Contacts">Contacts</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#Qualifications" class="nav-link">Qualifications</a></li>
+        <li><a href="#Projects" class="nav-link">Projects</a></li>
+        <li><a href="#feedbacks" class="nav-link">Feedbacks</a></li>
+        <li><a href="#Contacts" class="nav-link">Contacts</a></li>
       </ul>
     </div>
     <main>
@@ -67,7 +67,9 @@
           <div id="intro">I'm Kavindi</div>
           <div id="Profession">Professional fullstack developer</div>
 
-          <button id="btn-download">Download CV</button>
+          <button id="btn-download">
+            <span><i class="fa-solid fa-download"></i></span>Download CV
+          </button>
           <div id="home-me">contact me</div>
           <div class="home-container">
             <a
@@ -559,22 +561,10 @@
       </div>
     </footer>
 
-    <script>
-      const burger = document.getElementById("burger");
-      const menuPanel = document.getElementById("menu-panel-id");
-      const closeBtn = document.getElementById("btn-close");
-
-      burger.addEventListener("click", () => {
-        menuPanel.classList.toggle("active");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        menuPanel.classList.remove("active");
-      });
-    </script>
     <script src="js/Qualifications.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/feedbacks.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/hide-menu-bar.js"></script>
   </body>
 </html>

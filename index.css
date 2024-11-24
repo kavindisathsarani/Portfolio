@@ -39,10 +39,90 @@ header {
   font-size: 4rem;
   font-weight: 400;
   font-style: normal;
+  position: relative;
+  animation: glitch 1s infinite;
 }
 
 #greeting {
   color: #113d94;
+}
+
+#greeting::before,
+#intro::before {
+  content: attr(data-text); /* Use the text from the element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: red; /* Glitch color */
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-anim 1s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+#greeting::after,
+#intro::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: blue; /* Another glitch color */
+  clip: rect(0, 0, 0, 900px);
+  animation: glitch-anim 1s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+/* Define the glitch effect animation */
+@keyframes glitch {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Define the keyframes for the glitching "before" and "after" pseudo-elements */
+@keyframes glitch-anim {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(10px, 900px, 40px, 0);
+    transform: translate(-5px);
+  }
+  40% {
+    clip: rect(30px, 900px, 60px, 0);
+    transform: translate(5px);
+  }
+  60% {
+    clip: rect(50px, 900px, 90px, 0);
+    transform: translate(-3px);
+  }
+  80% {
+    clip: rect(70px, 900px, 120px, 0);
+    transform: translate(3px);
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(0);
+  }
 }
 
 #Profession {
@@ -151,6 +231,10 @@ header {
   box-shadow: 0 4px 12px rgb(103, 101, 101);
   /* box-shadow: 0 4px 12px rgb(89, 128, 153); */
   transition: transform ease;
+}
+
+#btn-download i {
+  margin-right: 3px;
 }
 
 #btn-download:hover {
