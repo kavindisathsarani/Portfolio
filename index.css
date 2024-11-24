@@ -151,6 +151,8 @@ header {
 
 #btn-download:hover {
   transform: scale(1.1);
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 #title-about {
   font-family: "Chewy", system-ui;
@@ -212,6 +214,8 @@ h3 {
 
 #btn-see-more:hover {
   transform: scale(1.1);
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 /* service section */
 #services h1 {
@@ -466,7 +470,7 @@ h1 span {
   overflow: hidden;
   margin-top: 20px; /* Add margin to separate from the header */
   border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for the carousel */
+  box-shadow: 0 4px 12px rgb(103, 101, 101); /* Soft shadow for the carousel */
 }
 
 .carousel-wrapper {
@@ -482,7 +486,37 @@ h1 span {
   transition: transform 0.5s ease; /* Smooth transition for each item */
   backface-visibility: hidden; /* Hide the back of the items */
   border-radius: 10px; /* Rounded corners for carousel items */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow around carousel items */
+  box-shadow: 0 4px 12px rgb(103, 101, 101); /* Soft shadow around carousel items */
+  position: relative; /* Make the item relative for absolute positioning of the text */
+  display: inline-block; /* Ensure items are displayed inline */
+}
+
+.carousel-item img {
+  display: block; /* Remove bottom space under images */
+  width: 100%; /* Make images responsive */
+}
+
+.hover-text {
+  position: absolute;
+  border-radius: 5px;
+  top: 53%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  color: white; /* Change text color */
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: background for better visibility */
+  padding: 5px; /* Optional: padding for better appearance */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  opacity: 1; /* Initially visible */
+}
+
+.carousel-item:hover .hover-text {
+  opacity: 0; /* Hide the text on hover */
 }
 
 .carousel img {
@@ -499,14 +533,12 @@ h1 span {
 .item-info {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
   color: #fff;
   border-radius: 0 0 10px 10px; /* Round bottom corners of the text box */
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
-}
-
-.item-info p {
   font-family: "Crimson Text", serif;
 }
 
@@ -532,12 +564,13 @@ h1 span {
     0.8
   ); /* Semi-transparent background for visibility */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
 }
 
 .carousel-btn:hover {
   background-color: rgba(255, 255, 255, 1); /* Change background on hover */
   transform: scale(1.1); /* Slight enlarge effect on hover */
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
 }
 
 .carousel-btn.prev {
@@ -555,13 +588,51 @@ h1 span {
   background-color: #55769d;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgb(103, 101, 101);
 }
 
 .demo-btn:hover {
-  background-color: #55769d;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
+}
+
+.footer-links {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Space above the footer links */
+}
+
+.github-link {
+  font-size: 36px; /* Increase icon size */
+  color: white;
+  margin-right: 15px; /* Space between icon and button */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.github-link:hover {
+  color: #4f92e9; /* Change color on hover */
+  /* box-shadow: 0 4px 12px rgb(103, 101, 101); */
+  transform: scale(1.1);
+}
+
+.projects-btn {
+  background-color: #55769d; /* Button background color */
+  text-decoration: none;
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 50px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for button */
+  font-size: 16px; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.projects-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 
 /* feedbacks */
@@ -700,6 +771,8 @@ textarea {
 
 .btn:hover {
   transform: scale(1.1);
+  background-color: #0056b3;
+  box-shadow: 0 0 15px rgba(9, 126, 216, 0.7), 0 0 30px rgba(9, 126, 216, 0.5); /* Blue glow effect */
 }
 
 footer {
@@ -902,6 +975,7 @@ h3 {
 
   .item-info {
     padding: 10px; /* Smaller padding for text */
+    font-size: 0.9rem;
   }
 
   .demo-btn {
@@ -911,6 +985,16 @@ h3 {
   .portfolio h1 {
     font-family: Arial, sans-serif;
     font-size: 2rem;
+  }
+
+  .hover-text {
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+  }
+
+  .projects-btn {
+    font-size: 0.8rem;
   }
 
   /* feedback */
@@ -1166,5 +1250,9 @@ h3 {
 
   .social-media-container i {
     font-size: 2.5rem;
+  }
+
+  section {
+    scroll-margin-top: 75px; /* Replace 100px with your header's height */
   }
 }
